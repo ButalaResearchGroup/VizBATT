@@ -36,7 +36,7 @@ import dash_bootstrap_components as dbc
 from dash.exceptions import PreventUpdate
 import io
 import base64
-import simpleML as sml
+import simpleml as sml
 
 
 #os.chdir(r'C:\Users\dalverson\Dropbox (UFL)\Butala Hackathon Team\Danielles Code Folder\wrpoly\data')

@@ -41,7 +41,7 @@ import simpleml as sml
 
 #os.chdir(r'C:\Users\dalverson\Dropbox (UFL)\Butala Hackathon Team\Danielles Code Folder\wrpoly\data')
 
-merged_df = pd.read_csv('battery_structure_performance', index_col=0)
+merged_df = pd.read_csv('battery_structure_performance.csv', index_col=0)
 #merged_df['Octahedral Distortion?'] = merged_df['Octahedral Distortion?'].map({'No': 0, 'Yes': 1})
 unique_df = merged_df.drop_duplicates(subset='cif_name', keep='first').copy()
 #unique_df['Octahedral Distortion?'] = unique_df['Octahedral Distortion?'].map({'No': 0, 'Yes': 1})

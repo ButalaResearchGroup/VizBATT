@@ -1,6 +1,6 @@
 #MIT License
 # 
-# Copyright (c) 2024 Danielle N. Alverson, Eric Fonseca, Kausturi Parui, Steph J. Meikle
+# Copyright (c) 2025 Danielle N. Alverson, Eric Fonseca, Kausturi Parui, Steph J. Meikle
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -41,7 +41,7 @@ import simpleml as sml
 
 #os.chdir(r'C:\Users\dalverson\Dropbox (UFL)\Butala Hackathon Team\Danielles Code Folder\wrpoly\data')
 
-merged_df = pd.read_csv('battery_structure_performance.csv', index_col=0)
+merged_df = pd.read_csv('merged_new_data.csv', index_col=0)
 #merged_df['Octahedral Distortion?'] = merged_df['Octahedral Distortion?'].map({'No': 0, 'Yes': 1})
 unique_df = merged_df.drop_duplicates(subset='cif_name', keep='first').copy()
 #unique_df['Octahedral Distortion?'] = unique_df['Octahedral Distortion?'].map({'No': 0, 'Yes': 1})
@@ -367,12 +367,12 @@ def update_scatter_plot(wr_mat, selected_x, selected_y, selected_size, color, sy
     #    'poly_types': 'Polyhedra Types', 'n_atoms_per_cell': 'Number of Atoms per Unit Cell', 'cif_name': 'Cif Name'}
     
     if wr_mat  == 'all':
-        filtered_df = unique_df
+        filtered_df = merged_df
     if wr_mat == 'Wadsley-Roth':
-        filtered_df = unique_df[(unique_df['Structure'] == 'Wadsley-Roth')]
+        filtered_df = merged_df[(merged_df['Structure'] == 'Wadsley-Roth')]
         
     if wr_mat == 'Wadsley-Roth Adjacent':
-        filtered_df = unique_df[unique_df['Structure'] == 'Wadsley-Roth Adjacent']
+        filtered_df = merged_df[merged_df['Structure'] == 'Wadsley-Roth Adjacent']
 
     # Reset index to ensure unique indices
     filtered_df.reset_index(drop=True, inplace=True)
@@ -395,8 +395,8 @@ def update_scatter_plot(wr_mat, selected_x, selected_y, selected_size, color, sy
         print(search_term)
     else:
         # Filter data based on search term
-        filtered_df_2 = unique_df[(unique_df['Cif Name'].str.contains(search_term, case=False, na=False)) |
-                        (unique_df['Formula'].str.contains(search_term, case=False, na=False))]
+        filtered_df_2 = merged_df[(merged_df['Cif Name'].str.contains(search_term, case=False, na=False)) |
+                        (merged_df['Formula'].str.contains(search_term, case=False, na=False))]
         print(search_term)
         
     # Check if file_contents is None
@@ -439,7 +439,7 @@ def update_scatter_plot(wr_mat, selected_x, selected_y, selected_size, color, sy
                 
     #             # Merge the uploaded data with the filtered data
                 if filtered_df_2 is None:
-                    filtered_df_2 = pd.concat([unique_df, uploaded_df], ignore_index=True)
+                    filtered_df_2 = pd.concat([merged_df, uploaded_df], ignore_index=True)
                 else:
                     filtered_df_2 = pd.concat([filtered_df, uploaded_df], ignore_index=True)
                 os.remove(temp_filepath)

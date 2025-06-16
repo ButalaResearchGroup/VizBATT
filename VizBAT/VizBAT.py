@@ -101,7 +101,8 @@ unique_df.columns.metadata = {'Average Bond Length': {'description': 'Average bo
                                 'Rate of Cycling (nC)': {'description': 'the rate of cycling of the material', 'units': 'nC'},
                                 'Voltage (V)': {'description': 'the voltage of the material', 'units': 'V'},
                                 'Columbic Efficiency (%)': {'description': 'the columbic efficiency of the material', 'units': '%'},
-                                'Reversible/Irreversible cycling': {'description': 'the reversible/irreversible cycling of the material', 'units': 'Unitless'}
+                                'Reversible/Irreversible cycling': {'description': 'the reversible/irreversible cycling of the material', 'units': 'Unitless'}, 
+                                'Structure': {'description': 'the structure type of the material', 'units': 'Unitless'},
 }
 merged_df.columns.metadata = {'Average Bond Length': {'description': 'Average bond length of the material', 'units': 'Angstroms'},
                               'Standard Deviation Bond Length': {'description': 'Standard deviation of bond length of the material', 'units': 'Angstroms'},
@@ -136,7 +137,8 @@ merged_df.columns.metadata = {'Average Bond Length': {'description': 'Average bo
                                 'Rate of Cycling (nC)': {'description': 'the rate of cycling of the material', 'units': 'nC'},
                                 'Voltage (V)': {'description': 'the voltage of the material', 'units': 'V'},
                                 'Columbic Efficiency (%)': {'description': 'the columbic efficiency of the material', 'units': '%'},
-                                'Reversible/Irreversible cycling': {'description': 'the reversible/irreversible cycling of the material', 'units': 'Unitless'}
+                                'Reversible/Irreversible cycling': {'description': 'the reversible/irreversible cycling of the material', 'units': 'Unitless'}, 
+                                'Structure': {'description': 'the structure type of the material', 'units': 'Unitless'},
 }
                                 
 image_path ='NSF_Official_logo_High_Res_1200ppi.png'                               

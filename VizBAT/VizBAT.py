@@ -68,6 +68,23 @@ for_none_df_m = merged_df[['for_none']]
 merged_df = merged_df.drop(columns=['for_none'])
 unique_df = unique_df.drop(columns=['for_none'])
 
+# fix specified columns to have only float values, if no value is present, set to 0
+float_columns = ['Average Bond Length', 'Standard Deviation Bond Length', 'Skew Bond Length',
+                 'Distortion Index', 'Quadratic Elongation', 'Number of Corner Pairs',
+                 'Number of Edge Pairs', 'Bond Angle Variance', 'Number of Face Pairs',
+                 'Number of Atoms in Unit Cell', 'Average Bond Length Angles',
+                 'Standard Deviation Bond Length Angles', 'Skew Bond Length Angles',
+                 'Volumes', 'Central Atoms', 'Polyhedra Formula', 'Polyhedra Types',
+                 'Number of Atoms per Unit Cell', 'Capacity (mAh/g)', '1st Charge (mAh/g)', '1st Discharge (mAh/g)',
+                 '2nd Discharge (mAh/g)', 'Mol wt (g/mol)', 'Total Number of TM', 'Li/TM ', 'x moles of Li+',
+                 'Edge pairs/Corner Pairs', '1st Charge/1st Discharge Ratio', '2nd/1st Discharge Ratio']
+for col in float_columns:
+    if col in merged_df.columns:
+        merged_df[col] = pd.to_numeric(merged_df[col], errors='coerce').fillna(0)
+    if col in unique_df.columns:
+        unique_df[col] = pd.to_numeric(unique_df[col], errors='coerce').fillna(0)
+        
+
 unique_df.columns.metadata = {'Average Bond Length': {'description': 'Average bond length of the material', 'units': 'Angstroms'},
                               'Standard Deviation Bond Length': {'description': 'Standard deviation of bond length of the material', 'units': 'Angstroms'},
                                 'Skew Bond Length': {'description': 'Skewness of bond length of the material', 'units': 'Angstroms'},
@@ -103,6 +120,7 @@ unique_df.columns.metadata = {'Average Bond Length': {'description': 'Average bo
                                 'Columbic Efficiency (%)': {'description': 'the columbic efficiency of the material', 'units': '%'},
                                 'Reversible/Irreversible cycling': {'description': 'the reversible/irreversible cycling of the material', 'units': 'Unitless'}, 
                                 'Structure': {'description': 'the structure type of the material', 'units': 'Unitless'},
+                                'Edge pairs/Corner Pairs': {'description': 'the ratio of edge pairs to corner pairs in the polyhedron', 'units': 'Unitless'},
 }
 merged_df.columns.metadata = {'Average Bond Length': {'description': 'Average bond length of the material', 'units': 'Angstroms'},
                               'Standard Deviation Bond Length': {'description': 'Standard deviation of bond length of the material', 'units': 'Angstroms'},
@@ -139,6 +157,7 @@ merged_df.columns.metadata = {'Average Bond Length': {'description': 'Average bo
                                 'Columbic Efficiency (%)': {'description': 'the columbic efficiency of the material', 'units': '%'},
                                 'Reversible/Irreversible cycling': {'description': 'the reversible/irreversible cycling of the material', 'units': 'Unitless'}, 
                                 'Structure': {'description': 'the structure type of the material', 'units': 'Unitless'},
+                                'Edge pairs/Corner Pairs': {'description': 'the ratio of edge pairs to corner pairs in the polyhedron', 'units': 'Unitless'}
 }
                                 
 image_path ='NSF_Official_logo_High_Res_1200ppi.png'                               

@@ -1,6 +1,6 @@
-# VizBAT
+# VizBATT
 
-**VizBAT** is a visualization tool designed to explore and analyze battery materials, specifically focusing on Wadsley-Roth materials. This tool leverages five-dimensional visualization to uncover structure-performance qualitative trends, making it an invaluable resource for materials science and engineering research in energy storage.
+**VizBATT** is a visualization tool designed to explore and analyze battery materials, specifically focusing on Wadsley-Roth materials. This tool leverages five-dimensional visualization to uncover structure-performance qualitative trends, making it an invaluable resource for materials science and engineering research in energy storage.
 
 ## Features
 

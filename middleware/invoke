@@ -1,8 +1,0 @@
-#!/VizBAT
-
-#
-# jupyter tool
-#
-/usr/vizbat/invoke_app "$@" -t vizbatt \
-                         -C "start_jupyter -A -T @tool VizBAT/VizBATT.ipynb" \
-                         -u anaconda-7 \

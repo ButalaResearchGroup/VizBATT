@@ -1,6 +1,6 @@
 #MIT License
 # 
-# Copyright (c) 2025 Danielle N. Alverson, Eric Fonseca, Kausturi Parui, Steph J. Meikle
+# Copyright (c) 2025 Danielle N. Alverson, Eric Fonseca, Kausturi Parui, Steph J. Meikle, Megan M. Butala
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal

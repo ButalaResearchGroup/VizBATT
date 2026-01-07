@@ -1,10 +1,10 @@
-#!/VizBAT
+#!/bin/sh
 
 #
 # jupyter tool
 #
-/usr/vizbat/invoke_app "$@" -t vizbatt \
-                         -C "start_jupyter -A -T @tool VizBAT/VizBATT.ipynb" \
+/usr/bin/invoke_app "$@" -t vizbattgit2 \
+                         -C "start_jupyter -A -T @tool VizBATT.ipynb" \
                          -u anaconda-7 \
                           -r none \
                          -w headless

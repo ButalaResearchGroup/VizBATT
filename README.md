@@ -11,7 +11,15 @@
 
 ## Installation
 
-To install the necessary dependencies, run:
+Create a python 3.9 environment with conda
+**conda create -n your_env python==3.9**
 
-```bash
-pip install -r requirements.txt
+Activate your new environment
+**conda activate your_env**
+
+Navigate to the Vizbatt folder downloaded
+**cd Vizbatt**
+
+Install the pacakage and dependencies
+**python3.9 -m pip install .**
+

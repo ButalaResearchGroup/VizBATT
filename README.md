@@ -11,15 +11,19 @@
 
 ## Installation
 
-Create a python 3.9 environment with conda
-**conda create -n your_env python==3.9**
+- Create a python 3.9 environment with conda
 
-Activate your new environment
-**conda activate your_env**
+  **conda create -n your_env python==3.9**
 
-Navigate to the Vizbatt folder downloaded
-**cd Vizbatt**
+- Activate your new environment
 
-Install the pacakage and dependencies
-**python3.9 -m pip install .**
+  **conda activate your_env**
+
+- Navigate to the Vizbatt folder downloaded
+
+  **cd Vizbatt**
+
+- Install the pacakage and dependencies
+
+  **python3.9 -m pip install .**
 

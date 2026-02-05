@@ -1,5 +1,8 @@
 #!/bin/sh
-pip install --user -r @tool/requirements.txt
+# Define the local library path
+TOOLDIR="@tool"
+LIBDIR="${TOOLDIR}/lib"
+export PYTHONPATH="${LIBDIR}:${PYTHONPATH}"
 #
 # jupyter tool
 #

@@ -1,5 +1,5 @@
 #!/bin/sh
-
+pip install --user -r @tool/requirements.txt
 #
 # jupyter tool
 #

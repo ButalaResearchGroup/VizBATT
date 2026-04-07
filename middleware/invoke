@@ -4,6 +4,6 @@
 #
 /usr/bin/invoke_app "$@" -t vizbattgit2 \
                          -C "start_jupyter -A -T @tool VizBATT.ipynb" \
-                         -u anaconda-7 \
+                         -u PolyhedralAnalysis \
                           -r none \
                          -w headless

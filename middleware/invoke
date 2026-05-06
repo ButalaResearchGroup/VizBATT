@@ -3,6 +3,6 @@
 /usr/bin/invoke_app "$@" \
   -t vizbattgit2 \
   -C "start_jupyter -t -T @tool VizBATT.ipynb" \
-  -u anaconda-6 \
+  -u anaconda-7 \
   -r none \
   -w headless
